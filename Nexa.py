@@ -65,7 +65,7 @@ if __name__ == "__main__":
             webbrowser.open("stackoverflow.com")
 
         elif 'play music' in query:
-            music_dir = 'C:\\users\\user\\AppData\\Local\\Packages'
+            music_dir = 'Path to msuic application'
             songs = os.listdir(music_dir)
             print(songs)
             os.startfile(os.path.join(music_dir, songs[0]))
@@ -75,14 +75,14 @@ if __name__ == "__main__":
             speak(f"The time is {strTime}")  
 
         elif 'open code' in query:
-            codePath = "C:\\Users\\user\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"       
+            codePath = "path to vs code application"       
             os.startfile(codePath)
 
         elif 'email to Anushka' in query:
             try:
                 speak("What should I say?")
                 content = takeCommand()
-                to = "anushka10jaiswal01@gmail.com"
+                to = "abc@gmail.com"
                 sendEmail(to, content)
                 speak("Email has been sent!")
             except Exception as e:
